@@ -1,4 +1,6 @@
-export const productsDB = [
+import { ProductType } from '../types/ProductType';
+
+export const productsDB: ProductType[] = [
   {
     id: 'p001',
     name: 'Product 1',

@@ -11,10 +11,10 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous" />
   </head>
-  <body>
+  <body class="no-scroll">
     <!-- Header -->
     <nav class="navbar bg-dark d-flex justify-content-center w-100 align-items-center">
-      <a class="navbar-brand ms-4" href="#">
+      <a class="navbar-brand ms-4" id="placeLogo">
         <!-- <img
           src="/docs/5.3/assets/brand/bootstrap-logo.svg"
           alt="Logo"
@@ -23,122 +23,94 @@
           class="d-inline-block align-text-top" /> -->
         Logo
       </a>
-      <p class="m-0 me-4 fs-2 text-bg-dark">Bar do Jão</p>
+      <p class="m-0 me-4 fs-2 text-bg-dark" id="placeName">Bar do Jão</p>
     </nav>
 
-    <nav class="navbar navbar-expand-lg text-bg-secondary">
+    <nav class="navbar navbar-expand-lg text-bg-secondary" id="NavBar">
       <div class="d-flex justify-content-around w-100">
-        <a class="nav-link mx-1 w-50 text-center fw-semibold text-decoration-underline" href="#">Cardápio</a>
-        <a class="nav-link mx-1 w-50 text-center" href="#">Meu consumo</a>
+        <a class="nav-link mx-1 w-50 text-center fw-semibold text-decoration-underline" id="btnViewMenu">Cardápio</a>
+        <a class="nav-link mx-1 w-50 text-center" id="btnViewConsumption">Meu consumo</a>
       </div>
     </nav>
 
     <!-- Body -->
-    <div class="my-2 me-2 d-flex overflow-x-scroll no-scroll">
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
-      <div class="ps-2">
-        <button type="button" class="btn btn-outline-secondary">Categoria</button>
-      </div>
+    <div class="my-2 me-2 d-flex overflow-x-scroll no-scroll" id="categoryBar">
       <hr />
     </div>
 
     <!-- Produtos -->
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+    <div id="tableMenuItems" class="no-scroll">
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
-    </div>
 
-    <div class="card w-auto mx-2 mb-1">
-      <div class="card-body p-1">
-        <h5 class="card-title">Nome do produto</h5>
-        <p class="card-text mb-1">Breve descrição do produto</p>
-        <p class="card-text text-end">R$ 00,00</p>
+      <div class="card w-auto mx-2 mb-1">
+        <div class="card-body p-1">
+          <h5 class="card-title">Nome do produto</h5>
+          <p class="card-text mb-1">Breve descrição do produto</p>
+          <p class="card-text text-end">R$ 00,00</p>
+        </div>
       </div>
     </div>
 
