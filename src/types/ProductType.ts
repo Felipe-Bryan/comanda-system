@@ -4,5 +4,5 @@ export interface ProductType {
   description: string;
   price: number;
   active: boolean;
-  category: string;
+  categoryId: string;
 }

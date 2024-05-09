@@ -12,8 +12,8 @@ export function setCategories() {
   });
 
   categories.forEach((category) => {
-    if (category.active) {
-      categoryBar.innerHTML += categoryBtn(category);
-    }
+    // if (category.active) {
+    categoryBar.innerHTML += categoryBtn(category);
+    // }
   });
 }

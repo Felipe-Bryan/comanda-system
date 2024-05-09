@@ -1,6 +1,6 @@
-import { setCategories } from './functions/setCategories';
 import { setClickNavButtons } from './functions/setClickNavButtons';
+import { startMenu } from './pages/menu/startMenu';
 
 setClickNavButtons();
 
-setCategories();
+startMenu();
