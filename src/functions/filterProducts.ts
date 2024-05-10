@@ -1,5 +1,6 @@
 import { productItem } from '../components/productItem';
 import { productsDB } from '../database/products';
+import { setProductCardClick } from './setProductCardClick';
 
 export function filterProducts() {
   const filtered = document.querySelectorAll('.categoryBtn');
@@ -22,5 +23,14 @@ function setProductsByCategory(id: string) {
     if (item.categoryId === id) {
       productsSpot.innerHTML += productItem(item);
     }
+  });
+
+  const productItems = document.querySelectorAll('.productItem');
+
+  productItems.forEach((product) => {
+    const productId = product.id.replace('productCard', '');
+    product.addEventListener('click', () => {
+      setProductCardClick(productId);
+    });
   });
 }

@@ -3,7 +3,9 @@ import { ProductType } from '../types/ProductType';
 export function productItem(product: ProductType) {
   if (product.active) {
     return `
-    <div class="card w-auto mx-2 mb-1">
+    <div class="card w-auto mx-2 mb-1 productItem" id="productCard${
+      product.id
+    }" data-bs-toggle="modal" data-bs-target="#cartModal">
         <div class="card-body p-1">
           <h5 class="card-title">${product.name}</h5>
           <p class="card-text mb-1">${product.description}</p>

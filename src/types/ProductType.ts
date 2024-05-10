@@ -8,6 +8,6 @@ export interface ProductType {
   price: number;
   active: boolean;
   categoryId: string;
-  additionals?: AdditionalToProductType[];
-  requiredOption?: RequiredOptionToProductType[];
+  additionals: AdditionalToProductType[];
+  requiredOption: RequiredOptionToProductType[];
 }
