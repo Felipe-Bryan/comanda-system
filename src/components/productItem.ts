@@ -1,6 +1,6 @@
 import { ProductType } from '../types/ProductType';
 
-export function productItem(product: ProductType) {
+export function productItem(product: ProductType): string {
   if (product.active) {
     return `
     <div class="card w-auto mx-2 mb-1 productItem" id="productCard${
@@ -12,6 +12,8 @@ export function productItem(product: ProductType) {
           <p class="card-text text-end" id="${product.id}-price">R$ ${product.price.toFixed(2)}</p>
         </div>
     </div>`;
+  } else {
+    return '';
   }
 }
 

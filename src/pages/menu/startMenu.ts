@@ -3,7 +3,7 @@ import { filterProducts } from '../../functions/filterProducts';
 import { setCategories } from '../../functions/setCategories';
 import { setProductsMenu } from '../../functions/setProductsMenu';
 
-export function startMenu() {
+export function startMenu(): void {
   componentVisibility('tableConsumption', 'hide');
   componentVisibility('productsMenu', 'show');
   componentVisibility('categoryNav', 'show');

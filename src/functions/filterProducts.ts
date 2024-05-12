@@ -2,7 +2,7 @@ import { productItem } from '../components/productItem';
 import { productsDB } from '../database/products';
 import { setProductCardClick } from './setProductCardClick';
 
-export function filterProducts() {
+export function filterProducts(): void {
   const filtered = document.querySelectorAll('.categoryBtn');
 
   filtered.forEach((item) => {
@@ -13,7 +13,7 @@ export function filterProducts() {
   });
 }
 
-function setProductsByCategory(id: string) {
+function setProductsByCategory(id: string): void {
   const productsSpot = document.getElementById('productsMenu')!;
   productsSpot.innerHTML = '';
 

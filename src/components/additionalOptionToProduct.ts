@@ -3,7 +3,7 @@ import { componentVisibility } from '../functions/componentVisibility';
 import { AdditionalToProductType } from '../types/AdditionalToProductType';
 import { ProductType } from '../types/ProductType';
 
-export function additionalOptionToProduct(productId: string) {
+export function additionalOptionToProduct(productId: string): void {
   const productToFind: ProductType = productsDB.find((product) => {
     return product.id === productId;
   })!;
@@ -23,7 +23,7 @@ export function additionalOptionToProduct(productId: string) {
   }
 }
 
-function additionalItem(additionalItem: AdditionalToProductType, seq: number) {
+function additionalItem(additionalItem: AdditionalToProductType, seq: number): string {
   return `
 <div class="form-check">
     <input class="form-check-input" type="checkbox" name="additionalItem" id="additionalItem${seq}" />

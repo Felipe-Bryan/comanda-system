@@ -2,7 +2,7 @@ import { productItem } from '../components/productItem';
 import { productsDB } from '../database/products';
 import { setProductCardClick } from './setProductCardClick';
 
-export function setProductsMenu() {
+export function setProductsMenu(): void {
   const productsSpot = document.getElementById('productsMenu')!;
   productsSpot.innerHTML = '';
 

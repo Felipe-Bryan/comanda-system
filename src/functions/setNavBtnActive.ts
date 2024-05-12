@@ -1,4 +1,4 @@
-export function setNavBtnActive(id: string, active: boolean) {
+export function setNavBtnActive(id: string, active: boolean): void {
   const btn = document.getElementById(id)!;
 
   if (active) {

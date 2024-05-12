@@ -3,7 +3,7 @@ import { componentVisibility } from '../functions/componentVisibility';
 import { ProductType } from '../types/ProductType';
 import { RequiredOptionToProductType } from '../types/RequiredOption';
 
-export function requiredOptionToProduct(productId: string) {
+export function requiredOptionToProduct(productId: string): void {
   const productToFind: ProductType = productsDB.find((product) => {
     return product.id === productId;
   })!;
@@ -23,7 +23,7 @@ export function requiredOptionToProduct(productId: string) {
   }
 }
 
-function requiredItem(requiredItem: RequiredOptionToProductType, seq: number) {
+function requiredItem(requiredItem: RequiredOptionToProductType, seq: number): string {
   return `
 <div class="form-check">
     <input class="form-check-input" type="radio" name="requiredItem" id="requiredItem${seq}" />

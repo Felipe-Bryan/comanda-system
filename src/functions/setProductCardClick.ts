@@ -2,7 +2,7 @@ import { additionalOptionToProduct } from '../components/additionalOptionToProdu
 import { requiredOptionToProduct } from '../components/requiredOptionToProduct';
 import { productsDB } from '../database/products';
 
-export function setProductCardClick(productId: string) {
+export function setProductCardClick(productId: string): void {
   const productFound = productsDB.find((product) => {
     return product.id === productId;
   })!;

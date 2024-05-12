@@ -2,7 +2,7 @@ import { startConsumption } from '../pages/consumption/startConsumption';
 import { startMenu } from '../pages/menu/startMenu';
 import { setNavBtnActive } from './setNavBtnActive';
 
-export function setClickNavButtons() {
+export function setClickNavButtons(): void {
   document.getElementById('btnViewMenu')!.addEventListener('click', () => {
     setNavBtnActive('btnViewMenu', true);
     setNavBtnActive('btnViewConsumption', false);
