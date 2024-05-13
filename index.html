@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="./dist/assets/images/logo.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="./dist/assets/images/logo.png" type="image/x-icon" id="favicon" />
     <title>Comanda</title>
     <link rel="stylesheet" href="./dist/assets/css/style.css" />
     <link
@@ -72,7 +72,7 @@
 
     <!-- Modal -->
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="cartModalLabel">Nome do produto</h1>
@@ -102,8 +102,10 @@
             </div>
             <br />
 
+            <div class="w-100" id="orderValueSpot"></div>
+
             <div class="input-group mb-3">
-              <button class="btn btn-outline-danger w-25 fs-5" type="button" id="button-addon1">-</button>
+              <button class="btn btn-outline-danger w-25 fs-5" type="button" id="btnRemove">-</button>
               <input
                 type="number"
                 min="0"
@@ -113,7 +115,7 @@
                 aria-label="Example text with button addon"
                 aria-describedby="button-addon1"
                 disabled />
-              <button class="btn btn-outline-success w-25 fs-5" type="button" id="button-addon1">+</button>
+              <button class="btn btn-outline-success w-25 fs-5" type="button" id="btnAdd">+</button>
             </div>
           </div>
           <div class="modal-footer m-1 p-1">
