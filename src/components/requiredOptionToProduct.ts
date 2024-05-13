@@ -23,16 +23,15 @@ export function requiredOptionToProduct(productId: string): void {
   }
 }
 
-function requiredItem(requiredItem: RequiredOptionToProductType, seq: number): string {
+function requiredItem(requiredItem: RequiredOptionToProductType, sequency: number): string {
   return `
 <div class="form-check">
-    <input class="form-check-input" type="radio" name="requiredItem" id="requiredItem${seq}" />
-    <label class="form-check-label w-100" for="requiredItem${seq}">
+    <input class="form-check-input" type="radio" name="requiredItem" id="requiredItem${sequency}" />
+    <label class="form-check-label w-100" for="requiredItem${sequency}">
         <div class="d-flex justify-content-between w-100">
-            <div>${requiredItem.name}</div>
+            <div class="fst-italic">${requiredItem.name}</div>
             <div>R$ ${requiredItem.price.toFixed(2)}</div>
         </div>
     </label>
-</div>
-    `;
+</div>`;
 }

@@ -1,4 +1,4 @@
-import { AdditionalToProductType } from './AdditionalToProductType';
+import { AdditionalItemType } from './AdditionalItem';
 import { RequiredOptionToProductType } from './RequiredOption';
 
 export interface ProductType {
@@ -8,6 +8,7 @@ export interface ProductType {
   price: number;
   active: boolean;
   categoryId: string;
-  additionals: AdditionalToProductType[];
+  additionals: AdditionalItemType[];
   requiredOption: RequiredOptionToProductType[];
+  imageUrl?: string;
 }

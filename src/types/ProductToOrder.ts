@@ -1,10 +1,10 @@
-import { AdditionalToProductType } from './AdditionalToProductType';
+import { AdditionalItemType } from './AdditionalItem';
 import { ProductType } from './ProductType';
 import { RequiredOptionToProductType } from './RequiredOption';
 
 export interface ProductToOrderType extends ProductType {
   qt: number;
   requiredSelected?: RequiredOptionToProductType;
-  additionalSelected?: AdditionalToProductType[];
+  additionalSelected?: AdditionalItemType[];
   comment?: string;
 }

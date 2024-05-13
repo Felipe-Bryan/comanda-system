@@ -78,10 +78,11 @@ export const productsDB: ProductType[] = [
     name: 'Refrigerante 1',
     description: 'Descrição',
     price: 6,
-    active: true,
+    active: false,
     categoryId: 'ca06',
     additionals: [],
     requiredOption: [],
+    imageUrl: './dist/assets/images/refri.png',
   },
   {
     id: 'p007',
@@ -182,6 +183,7 @@ export const productsDB: ProductType[] = [
     categoryId: 'ca06',
     additionals: [],
     requiredOption: [],
+    imageUrl: './dist/assets/images/refri.png',
   },
   {
     id: 'p017',
@@ -282,6 +284,7 @@ export const productsDB: ProductType[] = [
     categoryId: 'ca06',
     additionals: [],
     requiredOption: [],
+    imageUrl: './dist/assets/images/refri.png',
   },
   {
     id: 'p027',

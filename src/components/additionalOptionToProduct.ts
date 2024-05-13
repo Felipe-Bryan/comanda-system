@@ -1,6 +1,6 @@
 import { productsDB } from '../database/products';
 import { componentVisibility } from '../functions/componentVisibility';
-import { AdditionalToProductType } from '../types/AdditionalToProductType';
+import { AdditionalItemType } from '../types/AdditionalItem';
 import { ProductType } from '../types/ProductType';
 
 export function additionalOptionToProduct(productId: string): void {
@@ -23,13 +23,13 @@ export function additionalOptionToProduct(productId: string): void {
   }
 }
 
-function additionalItem(additionalItem: AdditionalToProductType, seq: number): string {
+function additionalItem(additionalItem: AdditionalItemType, sequency: number): string {
   return `
 <div class="form-check">
-    <input class="form-check-input" type="checkbox" name="additionalItem" id="additionalItem${seq}" />
-    <label class="form-check-label w-100" for="additionalItem${seq}">
+    <input class="form-check-input" type="checkbox" name="additionalItem" id="additionalItem${sequency}" />
+    <label class="form-check-label w-100" for="additionalItem${sequency}">
         <div class="d-flex justify-content-between w-100">
-            <div>${additionalItem.name}</div>
+            <div class="fst-italic">${additionalItem.name}</div>
             <div>R$ ${additionalItem.price.toFixed(2)}</div>
         </div>
     </label>
