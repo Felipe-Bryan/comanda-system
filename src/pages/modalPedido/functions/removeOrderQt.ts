@@ -12,5 +12,7 @@ export function removeOrderQt() {
 
   orderValue.innerText = calcValues(orderFound).toFixed(2);
 
+  orderFound.orderValue = calcValues(orderFound);
+
   saveToStorage('newOrderProduct', orderFound);
 }

@@ -46,6 +46,7 @@ export function watchCheckboxes() {
         }
 
         orderValue.innerText = calcValues(modifiedOrder).toFixed(2);
+        modifiedOrder.orderValue = calcValues(modifiedOrder);
 
         saveToStorage('newOrderProduct', modifiedOrder);
       }

@@ -28,6 +28,7 @@ export function watchRadios() {
         };
 
         orderValue.innerText = calcValues(modifiedOrder).toFixed(2);
+        modifiedOrder.orderValue = calcValues(modifiedOrder);
 
         saveToStorage('newOrderProduct', modifiedOrder);
       }
