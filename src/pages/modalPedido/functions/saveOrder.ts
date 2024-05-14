@@ -1,5 +1,6 @@
 import { OrderType } from '../../../types/OrderType';
 import { ProductToOrderType } from '../../../types/ProductToOrder';
+import { closeModal } from '../../../utils/closeModal';
 import { getStorageData } from '../../../utils/getStorageData';
 import { getUrlValue } from '../../../utils/getUrlValue';
 import { saveToStorage } from '../../../utils/saveToStorage';
@@ -42,4 +43,6 @@ export function saveOrder() {
 
     saveToStorage('myOrders', myOrders);
   }
+
+  closeModal();
 }
