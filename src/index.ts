@@ -7,6 +7,8 @@ import { startMenu } from './pages/menu/startMenu';
 const store = storeInfo;
 defineStoreInfo(store);
 
+localStorage.clear();
+
 setClickNavButtons();
 
 startMenu();
