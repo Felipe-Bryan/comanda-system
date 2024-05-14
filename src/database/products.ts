@@ -82,7 +82,6 @@ export const productsDB: ProductType[] = [
     categoryId: 'ca06',
     additionals: [],
     requiredOption: [],
-    imageUrl: './dist/assets/images/refri.png',
   },
   {
     id: 'p007',
@@ -183,7 +182,6 @@ export const productsDB: ProductType[] = [
     categoryId: 'ca06',
     additionals: [],
     requiredOption: [],
-    imageUrl: './dist/assets/images/refri.png',
   },
   {
     id: 'p017',
@@ -284,7 +282,6 @@ export const productsDB: ProductType[] = [
     categoryId: 'ca06',
     additionals: [],
     requiredOption: [],
-    imageUrl: './dist/assets/images/refri.png',
   },
   {
     id: 'p027',

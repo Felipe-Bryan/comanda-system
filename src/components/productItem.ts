@@ -9,7 +9,7 @@ export function productItem(product: ProductType): string {
     <div class="d-flex align-items-end">
       <div class="me-1 w-25">
         <img 
-        src="${product.imageUrl || './dist/assets/images/plate.png'}" 
+        src="${product.imageUrl || './dist/assets/images/food-icon.png'}" 
         class="img-thumbnail border border-0" 
         alt="${product.name}" />
       </div>
