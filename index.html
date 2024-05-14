@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="shortcut icon" href="./dist/assets/images/logo.png" type="image/x-icon" id="favicon" />
+    <link rel="shortcut icon" type="image/x-icon" id="favicon" />
     <title>Comanda</title>
     <link rel="stylesheet" href="./dist/assets/css/style.css" />
     <link
@@ -16,15 +16,8 @@
   <body class="no-scroll">
     <!-- Header -->
     <nav class="navbar bg-dark d-flex justify-content-center w-100 p-1 align-items-center">
-      <a class="navbar-brand p-0 me-2" id="placeLogo">
-        <img
-          src="./dist/assets/images/logo.png"
-          alt="Logo"
-          width="40"
-          height="40"
-          class="d-inline-block align-text-top m-0" />
-      </a>
-      <p class="m-0 me-4 fs-2 text-bg-dark" id="placeName">Bar do João</p>
+      <a class="navbar-brand p-0 me-2" id="placeLogo"></a>
+      <p class="m-0 me-4 fs-2 text-bg-dark" id="storeName"></p>
     </nav>
 
     <nav class="navbar navbar-expand-lg text-bg-secondary" id="NavBar">
@@ -36,35 +29,235 @@
 
     <!-- Body -->
     <nav id="categoryNav">
-      <div class="my-2 me-2 d-flex overflow-x-scroll no-scroll" id="categoryBar">
-        <hr />
-      </div>
+      <div class="my-2 me-2 d-flex overflow-x-scroll no-scroll" id="categoryBar"></div>
     </nav>
 
     <!-- Produtos -->
 
     <div id="productsMenu"></div>
 
-    <table class="table table-striped" id="tableConsumption">
-      <thead>
+    <table class="table" id="tableConsumption" style="display: none">
+      <thead class="sticky-top">
         <tr>
-          <!-- <th scope="col">#</th> -->
           <th scope="col">Produto</th>
           <th scope="col" class="text-end">Quantidade</th>
-          <th scope="col">Valor</th>
+          <th scope="col" class="text-end">Valor</th>
+        </tr>
+        <tr>
+          <td colspan="3" class="m-0 p-0">
+            <hr class="m-0 p-0" />
+          </td>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <!-- <th scope="row">1</th> -->
-          <td>Nome do produto</td>
-          <td class="text-end">2</td>
-          <td>R$ 00,00</td>
-        </tr>
+        <div>
+          <tr>
+            <td class="">Nome do produto</td>
+            <td class="text-center">2</td>
+            <td class="text-end m-1">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Required Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Additional Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">Subtotal</td>
+            <td class="m-1 p-1 text-end" colspan="2">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="text-end m-1 p-1">Status:</td>
+            <td class="m-1 p-1">Em produção</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="m-0 p-0">
+              <hr class="m-0 p-0" />
+            </td>
+          </tr>
+        </div>
+
+        <div>
+          <tr>
+            <td class="">Nome do produto</td>
+            <td class="text-center">2</td>
+            <td class="text-end m-1">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Required Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Additional Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">Subtotal</td>
+            <td class="m-1 p-1 text-end" colspan="2">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="text-end m-1 p-1">Status:</td>
+            <td class="m-1 p-1">Em produção</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="m-0 p-0">
+              <hr class="m-0 p-0" />
+            </td>
+          </tr>
+        </div>
+
+        <div>
+          <tr>
+            <td class="">Nome do produto</td>
+            <td class="text-center">2</td>
+            <td class="text-end m-1">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Required Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Additional Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">Subtotal</td>
+            <td class="m-1 p-1 text-end" colspan="2">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="text-end m-1 p-1">Status:</td>
+            <td class="m-1 p-1">Em produção</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="m-0 p-0">
+              <hr class="m-0 p-0" />
+            </td>
+          </tr>
+        </div>
+
+        <div>
+          <tr>
+            <td class="">Nome do produto</td>
+            <td class="text-center">2</td>
+            <td class="text-end m-1">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Required Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Additional Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">Subtotal</td>
+            <td class="m-1 p-1 text-end" colspan="2">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="text-end m-1 p-1">Status:</td>
+            <td class="m-1 p-1">Em produção</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="m-0 p-0">
+              <hr class="m-0 p-0" />
+            </td>
+          </tr>
+        </div>
+
+        <div>
+          <tr>
+            <td class="">Nome do produto</td>
+            <td class="text-center">2</td>
+            <td class="text-end m-1">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Required Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Additional Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">Subtotal</td>
+            <td class="m-1 p-1 text-end" colspan="2">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="text-end m-1 p-1">Status:</td>
+            <td class="m-1 p-1">Em produção</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="m-0 p-0">
+              <hr class="m-0 p-0" />
+            </td>
+          </tr>
+        </div>
+
+        <div>
+          <tr>
+            <td class="">Nome do produto</td>
+            <td class="text-center">2</td>
+            <td class="text-end m-1">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Required Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">• Additional Item</td>
+            <td class="m-1 p-1 text-end" colspan="2">+R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td class="ms-3 m-1 p-1">Subtotal</td>
+            <td class="m-1 p-1 text-end" colspan="2">R$ 0,00</td>
+          </tr>
+
+          <tr>
+            <td colspan="2" class="text-end m-1 p-1">Status:</td>
+            <td class="m-1 p-1">Em produção</td>
+          </tr>
+          <tr>
+            <td colspan="3" class="m-0 p-0">
+              <hr class="m-0 p-0" />
+            </td>
+          </tr>
+        </div>
       </tbody>
-      <tfoot>
-        <th scope="col">Total</th>
-        <th scope="col" colspan="2" class="text-end">R$ 00,00</th>
+      <tfoot class="m-0 p-0 bg-secondary">
+        <tr>
+          <td colspan="3" class="m-0 p-0">
+            <hr class="m-0 p-0" />
+          </td>
+        </tr>
+        <tr class="sticky-bottom m-0 p-0 bg-secondary">
+          <th scope="col" class="bg-secondary">Total</th>
+          <th scope="col" colspan="2" class="text-end bg-secondary">R$ 00,00</th>
+        </tr>
       </tfoot>
     </table>
 
@@ -75,19 +268,17 @@
       <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h1 class="modal-title fs-5" id="cartModalLabel">Nome do produto</h1>
+            <h1 class="modal-title fs-5" id="cartModalLabel"></h1>
           </div>
           <div class="modal-body p-2" id="modal-content">
             <div id="requiredOptions" style="display: none">
               <p class="fw-bold fst-italic">Obrigatório</p>
-
               <div id="requiredItems"></div>
               <br />
             </div>
 
             <div id="additionalOptions" style="display: none">
               <p class="fw-bold fst-italic">Adicionais</p>
-
               <div id="additionalItems"></div>
               <br />
             </div>
@@ -102,26 +293,13 @@
             </div>
             <br />
 
-            <div class="w-100" id="orderValueSpot"></div>
-
-            <div class="input-group mb-3">
-              <button class="btn btn-outline-danger w-25 fs-5" type="button" id="btnRemove">-</button>
-              <input
-                type="number"
-                min="0"
-                value="1"
-                class="form-control w-25 text-center"
-                placeholder=""
-                aria-label="Example text with button addon"
-                aria-describedby="button-addon1"
-                disabled />
-              <button class="btn btn-outline-success w-25 fs-5" type="button" id="btnAdd">+</button>
+            <div class="d-flex justify-content-end">
+              <div class="fst-italic fw-bold fs-5">R$ <span id="orderValue"></span></div>
             </div>
+
+            <div id="btnQt"></div>
           </div>
-          <div class="modal-footer m-1 p-1">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Voltar</button>
-            <button type="button" class="btn btn-success">Adicionar ao pedido</button>
-          </div>
+          <div class="modal-footer m-1 p-1" id="modalFooter"></div>
         </div>
       </div>
     </div>

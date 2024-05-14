@@ -33,3 +33,9 @@
 .inner-glass {
   background-color: rgba(255, 255, 255, 0)!important
 } */
+
+.alert {
+  position: fixed!important;
+  bottom: 7%;
+  z-index: 2000;
+}
