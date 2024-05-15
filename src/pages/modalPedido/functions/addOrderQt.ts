@@ -9,6 +9,7 @@ export function addOrderQt() {
   const orderValue = document.getElementById('orderValue')!;
 
   orderFound.qt++;
+
   input.value = String(orderFound.qt);
 
   orderValue.innerText = calcValues(orderFound).toFixed(2);
