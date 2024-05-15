@@ -27,17 +27,3 @@ export function productItem(product: ProductType): string {
   </div>
 </div>`;
 }
-
-// ./dist/assets/images/plate.png
-
-// <div
-//   class="card w-auto mx-2 mb-1 productItem"
-//   id="productCard${product.id}"
-//   data-bs-toggle="modal"
-//   data-bs-target="#cartModal">
-//     <div class="card-body p-1">
-//       <h5 class="card-title">${product.name}</h5>
-//       <p class="card-text mb-1">${product.description}</p>
-//       <p class="card-text text-end" id="${product.id}-price">R$ ${product.price.toFixed(2)}</p>
-//     </div>
-// </div>

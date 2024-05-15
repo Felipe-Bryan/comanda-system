@@ -1,5 +1,5 @@
 import { productItem } from '../../../components/productItem';
-import { productsDB } from '../../../database/products';
+import { storeInfo } from '../../../database/storeInfo';
 import { setCardClick } from '../../modalPedido/functions/setCardClick';
 
 export function filterProducts(): void {
@@ -17,7 +17,7 @@ function setProductsByCategory(id: string): void {
   const productsSpot = document.getElementById('productsMenu')!;
   productsSpot.innerHTML = '';
 
-  const products = productsDB;
+  const products = storeInfo.products;
 
   products.forEach((item) => {
     if (item.categoryId === id) {

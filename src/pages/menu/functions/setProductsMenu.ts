@@ -1,14 +1,13 @@
 import { productItem } from '../../../components/productItem';
-import { categoriesDB } from '../../../database/categories';
-import { productsDB } from '../../../database/products';
+import { storeInfo } from '../../../database/storeInfo';
 import { setCardClick } from '../../modalPedido/functions/setCardClick';
 
 export function setProductsMenu(): void {
   const productsSpot = document.getElementById('productsMenu')!;
   productsSpot.innerHTML = '';
 
-  const categories = categoriesDB;
-  const products = productsDB;
+  const categories = storeInfo.categories;
+  const products = storeInfo.products;
 
   categories.forEach((category) => {
     products.forEach((product) => {

@@ -1,9 +1,9 @@
 import { categoryBtn } from '../../../components/categoryBtn';
-import { categoriesDB } from '../../../database/categories';
+import { storeInfo } from '../../../database/storeInfo';
 
 export function setCategories(): void {
   const categoryBar = document.getElementById('categoryBar')!;
-  const categories = categoriesDB;
+  const categories = storeInfo.categories;
 
   categoryBar.innerHTML = '';
 

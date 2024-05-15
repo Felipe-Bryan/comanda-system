@@ -2,7 +2,7 @@ import { additionalItem } from '../../../components/additionalItem';
 import { buttonQt } from '../../../components/btnQt';
 import { modalFooter } from '../../../components/modalFooter';
 import { requiredItem } from '../../../components/requiredItem';
-import { productsDB } from '../../../database/products';
+import { storeInfo } from '../../../database/storeInfo';
 import { ProductToOrderType } from '../../../types/ProductToOrder';
 import { componentVisibility } from '../../../utils/componentVisibility';
 import { saveToStorage } from '../../../utils/saveToStorage';
@@ -14,7 +14,7 @@ import { watchRadios } from './watchRadios';
 
 export function setCardClick(productId: string) {
   // Pega o produto no banco de dados
-  const productFound = productsDB.find((product) => {
+  const productFound = storeInfo.products.find((product) => {
     return product.id === productId;
   })!;
 
