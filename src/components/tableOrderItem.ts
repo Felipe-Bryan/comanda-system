@@ -38,7 +38,7 @@ function tableStatus(status: string) {
   return `
   <div class="row fw-semibold">
   <div class="col-8 text-end p-0">Status</div>
-  <div class="col p-0 pe-1">${status}</div>
+  <div class="col p-0 pe-1 text-center">${status}</div>
 </div>`;
 }
 
