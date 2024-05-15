@@ -34,6 +34,14 @@ function tableComment(text: string) {
 </div>`;
 }
 
+function tableStatus(status: string) {
+  return `
+  <div class="row fw-semibold">
+  <div class="col-8 text-end p-0">Status</div>
+  <div class="col p-0 pe-1">${status}</div>
+</div>`;
+}
+
 function tableSubtotal(product: ProductToOrderType) {
   return `
 <div class="row fw-semibold border-bottom border-2">
@@ -59,6 +67,10 @@ export function tableOrderItem(product: ProductToOrderType) {
 
   if (product.comment) {
     table.innerHTML += tableComment(product.comment);
+  }
+
+  if (product.status) {
+    table.innerHTML += tableStatus(product.status);
   }
 
   table.innerHTML += tableSubtotal(product);
