@@ -8,4 +8,6 @@ export const storeInfo: StoreType = {
   logoUrl: './dist/assets/images/logo.png',
   categories: categoriesDB,
   products: productsDB,
+  users: [],
+  tables: [],
 };
