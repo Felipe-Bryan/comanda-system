@@ -6,6 +6,7 @@ import { getStorageData } from '../../utils/getStorageData';
 export function startConsumption() {
   componentVisibility('categoryNav', 'hide');
   componentVisibility('productsMenu', 'hide');
+  componentVisibility('btnHelp', 'hide');
   componentVisibility('tableConsumption', 'show');
 
   const myOrders: OrderType[] = getStorageData('myOrders');
