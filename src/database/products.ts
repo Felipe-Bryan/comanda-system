@@ -23,13 +23,19 @@ export const productsDB: ProductType[] = [
     requiredOption: [
       {
         id: 'req001',
-        name: 'Item de seleção obrigatória 1',
-        price: 0,
-      },
-      {
-        id: 'req002',
-        name: 'Item de seleção obrigatória 2',
-        price: 1.2,
+        title: 'Obrigatório 1',
+        items: [
+          {
+            id: 'req001-item-001',
+            name: 'Item de seleção obrigatória 1',
+            price: 0,
+          },
+          {
+            id: 'req001-item-002',
+            name: 'Item de seleção obrigatória 2',
+            price: 1.2,
+          },
+        ],
       },
     ],
   },
@@ -41,7 +47,40 @@ export const productsDB: ProductType[] = [
     active: true,
     categoryId: 'ca02',
     additionals: [],
-    requiredOption: [],
+    requiredOption: [
+      {
+        id: 'req001',
+        title: 'Obrigatório 1',
+        items: [
+          {
+            id: 'req001-item-001',
+            name: 'Item de seleção obrigatória 1',
+            price: 0.5,
+          },
+          {
+            id: 'req001-item-002',
+            name: 'Item de seleção obrigatória 2',
+            price: 0.7,
+          },
+        ],
+      },
+      {
+        id: 'req002',
+        title: 'Obrigatório 2',
+        items: [
+          {
+            id: 'req002-item-001',
+            name: 'Item de seleção obrigatória 1',
+            price: 3,
+          },
+          {
+            id: 'req002-item-002',
+            name: 'Item de seleção obrigatória 2',
+            price: 2.8,
+          },
+        ],
+      },
+    ],
   },
   {
     id: 'p003',

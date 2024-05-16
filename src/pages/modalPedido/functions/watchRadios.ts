@@ -1,37 +1,66 @@
 import { ProductToOrderType } from '../../../types/ProductToOrder';
+import { RequiredOptionToProductType } from '../../../types/RequiredOption';
 import { getStorageData } from '../../../utils/getStorageData';
 import { saveToStorage } from '../../../utils/saveToStorage';
 import { calcValues } from './calcValues';
 
 export function watchRadios() {
-  const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll('.required')!;
+  const orderFound: ProductToOrderType = getStorageData('newOrderProduct');
+
   const orderValue = document.getElementById('orderValue')!;
 
-  inputs.forEach((input) => {
-    input.addEventListener('change', () => {
-      const orderFound = getStorageData('newOrderProduct');
+  let modifiedOrder: ProductToOrderType = { ...orderFound, requiredSelected: [] };
 
-      let modifiedOrder: ProductToOrderType;
-
-      if (input.checked) {
-        document.querySelectorAll('.required')!.forEach((input) => {
-          input.classList.remove('is-invalid');
-        });
-
-        modifiedOrder = {
-          ...orderFound,
-          requiredSelected: {
-            id: `req-${orderFound.id}`,
-            name: input.title,
-            price: Number(input.value),
-          },
-        };
-
-        orderValue.innerText = calcValues(modifiedOrder).toFixed(2);
-        modifiedOrder.orderValue = calcValues(modifiedOrder);
-
-        saveToStorage('newOrderProduct', modifiedOrder);
-      }
+  for (let i = 0; i < orderFound.requiredOption.length; i++) {
+    modifiedOrder.requiredSelected?.push({
+      id: '',
+      title: '',
+      items: [
+        {
+          id: '',
+          name: '',
+          price: 0,
+        },
+      ],
     });
-  });
+  }
+
+  saveToStorage('newOrderProduct', modifiedOrder);
+
+  for (let i = 0; i < orderFound.requiredOption.length; i++) {
+    const inputs: NodeListOf<HTMLInputElement> = document.querySelectorAll(`.required${i}`)!;
+
+    inputs.forEach((input) => {
+      input.addEventListener('change', () => {
+        let updateOrderFound: ProductToOrderType = getStorageData('newOrderProduct');
+
+        if (input.checked) {
+          document.querySelectorAll(`.required${i}`)!.forEach((input) => {
+            input.classList.remove('is-invalid');
+          });
+
+          const newRequiredItem: RequiredOptionToProductType = {
+            id: `selected-${input.id}`,
+            title: `required-${input.id}`,
+            items: [
+              {
+                id: input.id,
+                name: input.title,
+                price: Number(input.value),
+              },
+            ],
+          };
+
+          if (updateOrderFound.requiredSelected) {
+            updateOrderFound.requiredSelected[i] = newRequiredItem;
+          }
+
+          orderValue.innerText = calcValues(updateOrderFound).toFixed(2);
+          updateOrderFound.orderValue = calcValues(updateOrderFound);
+
+          saveToStorage('newOrderProduct', updateOrderFound);
+        }
+      });
+    });
+  }
 }

@@ -11,11 +11,13 @@ function tableProductInfo(item: ProductToOrderType) {
 }
 
 function tableRequired(item: RequiredOptionToProductType) {
-  return `
-<div class="row fst-italic px-1">
-  <div class="col-6">• ${item.name}</div>
-  <div class="col-6 text-end">+ R$ ${item.price.toFixed(2)}</div>
-</div>`;
+  for (let i = 0; i < item.items.length; i++) {
+    return `
+    <div class="row fst-italic px-1">
+      <div class="col-6">• ${item.items[i].name}</div>
+      <div class="col-6 text-end">+ R$ ${item.items[i].price.toFixed(2)}</div>
+    </div>`;
+  }
 }
 
 function tableAdditional(item: AdditionalItemType) {
@@ -56,7 +58,9 @@ export function tableOrderItem(product: ProductToOrderType) {
   table.innerHTML += tableProductInfo(product);
 
   if (product.requiredSelected) {
-    table.innerHTML += tableRequired(product.requiredSelected);
+    for (let i = 0; i < product.requiredSelected.length; i++) {
+      table.innerHTML += tableRequired(product.requiredSelected[i]);
+    }
   }
 
   if (product.additionalSelected) {

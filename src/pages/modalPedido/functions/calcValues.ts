@@ -10,7 +10,11 @@ export function calcValues(product: ProductToOrderType) {
   }
 
   if (product.requiredSelected !== undefined) {
-    value += product.requiredSelected.price * product.qt;
+    for (let i = 0; i < product.requiredSelected.length; i++) {
+      for (let i2 = 0; i2 < product.requiredSelected[i].items.length; i2++) {
+        value += product.requiredSelected[i].items[i2].price * product.qt;
+      }
+    }
   }
 
   return value;

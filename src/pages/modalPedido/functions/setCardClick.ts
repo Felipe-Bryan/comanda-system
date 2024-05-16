@@ -25,21 +25,21 @@ export function setCardClick(productId: string) {
   document.getElementById('cartModalLabel')!.innerText = productFound.name;
 
   // Localiza o elemento HTML onde ficarão os itens de seleção obrigatória
-  const requiredItemsSpot = document.getElementById('requiredItems')!;
+  const requiredOptionsSpot = document.getElementById('requiredOptions')!;
   // reseta o código existente caso exista
-  requiredItemsSpot.innerHTML = '';
+  requiredOptionsSpot.innerHTML = '';
 
   // verifica se o produto tem itens de seleção obrigatoria
-  if (productFound.requiredOption.length > 0) {
-    // caso tenha habilita visualização do campo onde serão exibidos os itens
-    componentVisibility('requiredOptions', 'show');
-    // define o componente para cada item encontrado
-    for (let i = 0; i < productFound.requiredOption.length; i++) {
-      requiredItemsSpot.innerHTML += requiredItem(productFound.requiredOption[i], i);
+  if (productFound.requiredOption) {
+    if (productFound.requiredOption.length > 0) {
+      componentVisibility('requiredOptions', 'show');
+
+      for (let i = 0; i < productFound.requiredOption.length; i++) {
+        requiredOptionsSpot.innerHTML += requiredItem(productFound.requiredOption[i], i);
+      }
+    } else {
+      componentVisibility('requiredOptions', 'hide');
     }
-  } else {
-    // esconde o campo caso não haja itens de seleção obrigatoria
-    componentVisibility('requiredOptions', 'hide');
   }
 
   const additionalItemsSpot = document.getElementById('additionalItems')!;
@@ -59,9 +59,10 @@ export function setCardClick(productId: string) {
     componentVisibility('additionalOptions', 'hide');
   }
 
-  document.getElementById('orderValue')!.innerText = productFound.price.toFixed(2);
   watchRadios();
   watchCheckboxes();
+
+  document.getElementById('orderValue')!.innerText = productFound.price.toFixed(2);
 
   document.getElementById('btnQt')!.innerHTML = buttonQt();
 

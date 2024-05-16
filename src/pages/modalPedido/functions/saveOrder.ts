@@ -9,16 +9,20 @@ export function saveOrder() {
   const orderFound: ProductToOrderType = getStorageData('newOrderProduct');
 
   if (orderFound.requiredOption.length > 0) {
-    if (!orderFound.requiredSelected) {
-      document.querySelectorAll('.required')!.forEach((input) => {
-        input.classList.add('is-invalid');
-      });
+    if (orderFound.requiredSelected) {
+      for (let i = 0; i < orderFound.requiredOption.length; i++) {
+        if (orderFound.requiredSelected[i].id === '') {
+          document.querySelectorAll(`.required${i}`)!.forEach((input) => {
+            input.classList.add('is-invalid');
+          });
 
-      return;
+          return;
+        }
+      }
     }
   }
 
-  let newOrderedProduct: ProductToOrderType = { ...orderFound, status: 'Recebido' };
+  let newOrderedProduct: ProductToOrderType = { ...orderFound, status: 'Enviado' };
 
   const comment = <HTMLInputElement>document.getElementById('comment')!;
 

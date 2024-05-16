@@ -1,12 +1,12 @@
 import { AdditionalItemType } from './AdditionalItem';
 import { ProductType } from './ProductType';
-import { RequiredOptionToProductType } from './RequiredOption';
+import { RequiredItem, RequiredOptionToProductType } from './RequiredOption';
 
 export interface ProductToOrderType extends ProductType {
   qt: number;
-  requiredSelected?: RequiredOptionToProductType;
+  requiredSelected?: RequiredOptionToProductType[];
   additionalSelected?: AdditionalItemType[];
   comment?: string;
   orderValue: number;
-  status?: 'Recebido' | 'Em produção' | 'Entregue';
+  status?: 'Enviado' | 'Em produção' | 'Entregue';
 }
