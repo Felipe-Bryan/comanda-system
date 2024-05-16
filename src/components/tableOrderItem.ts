@@ -14,8 +14,8 @@ function tableRequired(item: RequiredOptionToProductType) {
   for (let i = 0; i < item.items.length; i++) {
     return `
     <div class="row fst-italic px-1">
-      <div class="col-6">• ${item.items[i].name}</div>
-      <div class="col-6 text-end">+ R$ ${item.items[i].price.toFixed(2)}</div>
+      <div class="col-8">• ${item.items[i].name}</div>
+      <div class="col text-end">+ R$ ${item.items[i].price.toFixed(2)}</div>
     </div>`;
   }
 }
@@ -23,8 +23,8 @@ function tableRequired(item: RequiredOptionToProductType) {
 function tableAdditional(item: AdditionalItemType) {
   return `
 <div class="row fst-italic px-1">
-  <div class="col-6">• ${item.name}</div>
-  <div class="col-6 text-end">+ R$ ${item.price.toFixed(2)}</div>
+  <div class="col-8">• ${item.name}</div>
+  <div class="col text-end">+ R$ ${item.price.toFixed(2)}</div>
 </div>`;
 }
 
@@ -37,19 +37,20 @@ function tableComment(text: string) {
 
 function tableStatus(status: string) {
   return `
-  <div class="row fw-semibold">
+<div class="row fw-semibold">
   <div class="col-12 text-end p-0 pe-2">Status: ${status}</div>
 </div>`;
 }
 
 function tableSubtotal(product: ProductToOrderType) {
   return `
-  <div class="row fw-semibold">
+<div class="row fw-semibold">
   <div class="col-4">Quantidade</div>
   <div class="col-2 text-end">${product.qt}</div>
   <div class="col text-center">Subtotal</div>
   <div class="col text-end">R$ ${product.orderValue.toFixed(2)}</div>
-</div>`;
+</div>
+<hr class="m-0 p-0" />`;
 }
 
 export function tableOrderItem(product: ProductToOrderType) {
