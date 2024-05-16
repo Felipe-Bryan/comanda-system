@@ -73,7 +73,7 @@ export function setCardClick(productId: string) {
     removeOrderQt();
   });
 
-  document.getElementById('modalFooter')!.innerHTML = modalFooter();
+  document.getElementById('modalFooter')!.innerHTML = modalFooter('Voltar', 'Enviar Pedido');
 
   document.getElementById('addOrder')!.addEventListener('click', () => {
     saveOrder();

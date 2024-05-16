@@ -37,8 +37,7 @@ function tableComment(text: string) {
 function tableStatus(status: string) {
   return `
   <div class="row fw-semibold">
-  <div class="col-8 text-end p-0">Status</div>
-  <div class="col p-0 pe-1 text-center">${status}</div>
+  <div class="col-12 text-end p-0 pe-2">Status: ${status}</div>
 </div>`;
 }
 
