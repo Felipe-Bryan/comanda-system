@@ -5,9 +5,8 @@ import { RequiredOptionToProductType } from '../types/RequiredOption';
 function tableProductInfo(item: ProductToOrderType) {
   return `
   <div class="row fw-semibold">
-  <div class="col-6">${item.name}</div>
-  <div class="col-2 text-end">${item.qt}</div>
-  <div class="col-4 text-end">R$ ${item.price.toFixed(2)}</div>
+  <div class="col-8">${item.name}</div>
+  <div class="col text-end">R$ ${item.price.toFixed(2)}</div>
 </div>`;
 }
 
@@ -43,9 +42,11 @@ function tableStatus(status: string) {
 
 function tableSubtotal(product: ProductToOrderType) {
   return `
-<div class="row fw-semibold border-bottom border-2">
-  <div class="col-6">Subtotal</div>
-  <div class="col-6 text-end">R$ ${product.orderValue.toFixed(2)}</div>
+  <div class="row fw-semibold">
+  <div class="col-4">Quantidade</div>
+  <div class="col-2 text-end">${product.qt}</div>
+  <div class="col text-center">Subtotal</div>
+  <div class="col text-end">R$ ${product.orderValue.toFixed(2)}</div>
 </div>`;
 }
 

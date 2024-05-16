@@ -4,31 +4,31 @@ export const productsDB: ProductType[] = [
   {
     id: 'p001',
     name: 'Entrada 1',
-    description: 'Description',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 1,
     active: true,
     categoryId: 'ca01',
     additionals: [
       {
         id: 'add001',
-        name: 'Additional 1',
+        name: 'Item de seleção opcional 1',
         price: 2,
       },
       {
         id: 'add002',
-        name: 'Additional 2',
+        name: 'Item de seleção opcional 2',
         price: 1.5,
       },
     ],
     requiredOption: [
       {
         id: 'req001',
-        name: 'Required 1',
+        name: 'Item de seleção obrigatória 1',
         price: 0,
       },
       {
         id: 'req002',
-        name: 'Required 2',
+        name: 'Item de seleção obrigatória 2',
         price: 1.2,
       },
     ],
@@ -36,7 +36,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p002',
     name: 'Prato 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 2,
     active: true,
     categoryId: 'ca02',
@@ -46,7 +46,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p003',
     name: 'Petisco 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 3,
     active: true,
     categoryId: 'ca03',
@@ -56,7 +56,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p004',
     name: 'Snack 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 4,
     active: true,
     categoryId: 'ca04',
@@ -66,7 +66,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p005',
     name: 'Sobremesa 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 5,
     active: true,
     categoryId: 'ca05',
@@ -76,7 +76,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p006',
     name: 'Refrigerante 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 6,
     active: false,
     categoryId: 'ca06',
@@ -86,7 +86,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p007',
     name: 'Suco 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 7,
     active: true,
     categoryId: 'ca07',
@@ -96,7 +96,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p008',
     name: 'Cerveja 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 8,
     active: true,
     categoryId: 'ca08',
@@ -106,7 +106,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p009',
     name: 'Bebida 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 9,
     active: true,
     categoryId: 'ca09',
@@ -116,7 +116,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p010',
     name: 'Drink 1',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 10,
     active: true,
     categoryId: 'ca10',
@@ -126,7 +126,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p011',
     name: 'Entrada 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 11,
     active: true,
     categoryId: 'ca01',
@@ -136,7 +136,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p012',
     name: 'Prato 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 12,
     active: true,
     categoryId: 'ca02',
@@ -146,7 +146,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p013',
     name: 'Petisco 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 13,
     active: true,
     categoryId: 'ca03',
@@ -156,7 +156,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p014',
     name: 'Snack 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 14,
     active: true,
     categoryId: 'ca04',
@@ -166,7 +166,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p015',
     name: 'Sobremesa 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 15,
     active: true,
     categoryId: 'ca05',
@@ -176,7 +176,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p016',
     name: 'Refrigerante 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 16,
     active: true,
     categoryId: 'ca06',
@@ -186,7 +186,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p017',
     name: 'Suco 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 17,
     active: true,
     categoryId: 'ca07',
@@ -196,7 +196,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p018',
     name: 'Cerveja 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 18,
     active: true,
     categoryId: 'ca08',
@@ -206,7 +206,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p019',
     name: 'Bebida 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 19,
     active: true,
     categoryId: 'ca09',
@@ -216,7 +216,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p020',
     name: 'Drink 2',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 20,
     active: true,
     categoryId: 'ca10',
@@ -226,7 +226,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p021',
     name: 'Entrada 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 21,
     active: true,
     categoryId: 'ca01',
@@ -236,7 +236,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p022',
     name: 'Prato 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 22,
     active: true,
     categoryId: 'ca02',
@@ -246,7 +246,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p023',
     name: 'Petisco 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 23,
     active: true,
     categoryId: 'ca03',
@@ -256,7 +256,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p024',
     name: 'Snack 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 24,
     active: true,
     categoryId: 'ca04',
@@ -266,7 +266,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p025',
     name: 'Sobremesa 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 25,
     active: true,
     categoryId: 'ca05',
@@ -276,7 +276,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p026',
     name: 'Refrigerante 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 26,
     active: true,
     categoryId: 'ca06',
@@ -286,7 +286,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p027',
     name: 'Suco 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 27,
     active: true,
     categoryId: 'ca07',
@@ -296,7 +296,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p028',
     name: 'Cerveja 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 28,
     active: true,
     categoryId: 'ca08',
@@ -306,7 +306,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p029',
     name: 'Bebida 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 29,
     active: true,
     categoryId: 'ca09',
@@ -316,7 +316,7 @@ export const productsDB: ProductType[] = [
   {
     id: 'p030',
     name: 'Drink 3',
-    description: 'Descrição',
+    description: 'Descrição das características do produto, por exemplo ingredientes ou tamanhos',
     price: 30,
     active: true,
     categoryId: 'ca10',

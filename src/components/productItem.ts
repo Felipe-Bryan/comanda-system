@@ -17,11 +17,7 @@ export function productItem(product: ProductType): string {
     </div>
 
     <div>
-      <p class="card-text mb-1 fst-italic">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, dolore quisquam perferendis accusantium ea
-        quaerat possimus sequi quam, ab, odio commodi consequuntur ipsam. Reiciendis, natus. Perferendis ad adipisci
-        illo minus!
-      </p>
+      <p class="card-text mb-1 fst-italic">${product.description}</p>
       <p class="card-text text-end fst-italic" id="${product.id}-price">R$ ${product.price.toFixed(2)}</p>
     </div>
   </div>
