@@ -7,7 +7,7 @@ export function startMenu() {
   componentVisibility('categoryNav', 'show');
   componentVisibility('productsMenu', 'show');
   componentVisibility('tableConsumption', 'hide');
-  componentVisibility('btnHelp', 'show');
+  componentVisibility('help', 'show');
   setCategories();
   filterProducts();
   setProductsMenu();

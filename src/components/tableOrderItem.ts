@@ -4,9 +4,12 @@ import { RequiredOptionToProductType } from '../types/RequiredOption';
 
 function tableProductInfo(item: ProductToOrderType) {
   return `
-  <div class="row fw-semibold">
-  <div class="col-8">${item.name}</div>
-  <div class="col text-end">R$ ${item.price.toFixed(2)}</div>
+<div class="row fw-semibold">
+  <div class="col fs-5">${item.name}</div>  
+</div>
+<div class="row">
+  <div class="col-8 text-end">Valor unitário</div>
+  <div class="col text-center">R$ ${item.price.toFixed(2)}</div>
 </div>`;
 }
 
@@ -38,17 +41,21 @@ function tableComment(text: string) {
 function tableStatus(status: string) {
   return `
 <div class="row fw-semibold">
-  <div class="col-12 text-end p-0 pe-2">Status: ${status}</div>
+  <div class="col-8 text-end">Status:</div>
+  <div class="col text-center">${status}</div>
 </div>`;
 }
 
 function tableSubtotal(product: ProductToOrderType) {
   return `
 <div class="row fw-semibold">
-  <div class="col-4">Quantidade</div>
-  <div class="col-2 text-end">${product.qt}</div>
-  <div class="col text-center">Subtotal</div>
-  <div class="col text-end">R$ ${product.orderValue.toFixed(2)}</div>
+  <div class="col-8 text-end">Quantidade</div>
+  <div class="col text-center">${product.qt}</div>
+</div>
+
+<div class="row fw-semibold">
+  <div class="col-8 text-end">Subtotal</div>
+  <div class="col text-center">R$ ${product.orderValue.toFixed(2)}</div>
 </div>
 <hr class="m-0 p-0" />`;
 }
