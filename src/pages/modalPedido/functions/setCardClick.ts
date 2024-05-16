@@ -13,6 +13,8 @@ import { watchCheckboxes } from './watchCheckboxes';
 import { watchRadios } from './watchRadios';
 
 export function setCardClick(productId: string) {
+  const commentIpt = <HTMLInputElement>document.getElementById('comment')!;
+  commentIpt.value = '';
   // Pega o produto no banco de dados
   const productFound = storeInfo.products.find((product) => {
     return product.id === productId;

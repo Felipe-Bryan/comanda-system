@@ -8,7 +8,11 @@ export function removeOrderQt() {
   const input = <HTMLInputElement>document.getElementById('orderQt')!;
   const orderValue = document.getElementById('orderValue')!;
 
-  orderFound.qt--;
+  if (orderFound.qt <= 1) {
+    orderFound.qt = 1;
+  } else {
+    orderFound.qt--;
+  }
 
   input.value = String(orderFound.qt);
 

@@ -5,8 +5,9 @@ export function buttonQt() {
     <input
       type="number"
       id="orderQt"
-      min="0"
+      min="1"
       value="1"
+      step="1"
       class="form-control w-25 text-center"
       placeholder=""
       aria-label="Example text with button addon"
