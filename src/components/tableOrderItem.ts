@@ -4,7 +4,7 @@ import { RequiredOptionToProductType } from '../types/RequiredOption';
 
 function tableProductInfo(item: ProductToOrderType) {
   return `
-<div class="row fw-semibold">
+<div class="row fw-semibold mw-100">
   <div class="col fs-5">${item.name}</div>  
 </div>
 <div class="row">
@@ -60,30 +60,41 @@ function tableSubtotal(product: ProductToOrderType) {
 <hr class="m-0 p-0" />`;
 }
 
-export function tableOrderItem(product: ProductToOrderType) {
-  const table = document.getElementById('tableContent')!;
+function tableItem(product: ProductToOrderType) {
+  let tableHTML: string = '';
 
-  table.innerHTML += tableProductInfo(product);
+  tableHTML += tableProductInfo(product);
 
   if (product.requiredSelected) {
     for (let i = 0; i < product.requiredSelected.length; i++) {
-      table.innerHTML += tableRequired(product.requiredSelected[i]);
+      tableHTML += tableRequired(product.requiredSelected[i]);
     }
   }
 
   if (product.additionalSelected) {
     if (product.additionalSelected.length > 0) {
-      product.additionalSelected.forEach((item) => (table.innerHTML += tableAdditional(item)));
+      product.additionalSelected.forEach((item) => (tableHTML += tableAdditional(item)));
     }
   }
 
   if (product.comment) {
-    table.innerHTML += tableComment(product.comment);
+    tableHTML += tableComment(product.comment);
   }
 
   if (product.status) {
-    table.innerHTML += tableStatus(product.status);
+    tableHTML += tableStatus(product.status);
   }
 
-  table.innerHTML += tableSubtotal(product);
+  tableHTML += tableSubtotal(product);
+
+  return tableHTML;
+}
+
+export function tableOrderItem(product: ProductToOrderType) {
+  const table = document.getElementById('tableContent')!;
+
+  table.innerHTML += `
+<div class="container glass p-1 m-0 my-1">
+  ${tableItem(product)}
+</div>`;
 }

@@ -2,7 +2,7 @@ import { ProductType } from '../types/ProductType';
 
 export function productItem(product: ProductType): string {
   return `
-<div class="card w-auto mx-2 mb-1 productItem" id="productCard${
+<div class="card w-auto mx-2 mb-1 productItem glass" id="productCard${
     product.id
   }" data-bs-toggle="modal" data-bs-target="#cartModal">
   <div class="card-body p-1">
@@ -10,7 +10,7 @@ export function productItem(product: ProductType): string {
       <div class="me-1 w-25">
         <img 
         src="${product.imageUrl || './dist/assets/images/food-icon.png'}" 
-        class="img-thumbnail border border-0" 
+        class="img-thumbnail border border-0 inner-glass" 
         alt="${product.name}" />
       </div>
       <h5 class="card-title">${product.name}</h5>
