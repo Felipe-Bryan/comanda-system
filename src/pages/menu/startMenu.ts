@@ -15,4 +15,6 @@ export function startMenu() {
   document.getElementById('all-btn')!.addEventListener('click', () => {
     setProductsMenu();
   });
+
+  window.scrollTo(0, 0);
 }

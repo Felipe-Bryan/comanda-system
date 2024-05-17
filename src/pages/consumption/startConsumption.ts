@@ -25,4 +25,6 @@ export function startConsumption() {
 
     totalValueSpot.innerHTML = `R$ ${totalValue.toFixed(2)}`;
   }
+
+  window.scrollTo(0, 0);
 }
