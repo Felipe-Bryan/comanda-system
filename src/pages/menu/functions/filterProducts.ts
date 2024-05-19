@@ -20,8 +20,10 @@ function setProductsByCategory(id: string): void {
   const products = storeInfo.products;
 
   products.forEach((item) => {
-    if (item.categoryId === id) {
-      productsSpot.innerHTML += productItem(item);
+    if (item.active) {
+      if (item.categoryId === id) {
+        productsSpot.innerHTML += productItem(item);
+      }
     }
   });
 
